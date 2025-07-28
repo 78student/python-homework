@@ -9,13 +9,12 @@ print_max(10,5)
 
 
 def print_yes_no(a,b)->None:
-    if a-b==135:
-        print('yes')
-    elif b-a==135:
+    if abs(a-b)==135:
         print('yes')
     else:
         print('no')
 print_yes_no(1,136)
+print_yes_no(136,1)
 
 def print_season(month:int)->None:
     if month<1:
@@ -43,11 +42,9 @@ print_yes_no_3(11,12,50)
 
 def print_count_positive(list)->None:
     c=0
-    if list[0]>0:           c=c+1
-    if list[1] > 0:         c = c + 1
-    if list[2] > 0:         c = c + 1
-    if list[3] > 0:         c = c + 1
-    if list[4] > 0:         c = c + 1
+    for i in list:
+        if i>0:
+            c +=1
     print(c)
 print_count_positive([2,8,9,-5,-10])
 
